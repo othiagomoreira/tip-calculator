@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Variables */
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan-1: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-2: hsl(184, 14%, 56%);
+    --Light-grayish-cyan-1: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Spaca Mono', monospace;
+    background-color: var(--Light-grayish-cyan-1);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin: 5rem 0 3.5rem 0;
+}
+
+.card {
+    background-color: var(--White);
+    width: 100%;
+    border-radius: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    padding: 2.5rem;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    color: var(--Dark-grayish-cyan-1);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.error-msg {
+    display: none;
+    color: indianred;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.inp-text {
+    background-color: var(--Light-grayish-cyan-2);
+    width: 100%;
+    border-radius: 0.5rem;
+    color: var(--Very-dark-cyan);
+    font-family: 'Spaca Mono', monospace;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: right;
+    padding: 0.5rem 2.4rem;
+    border: 2px solid transparent;
+    appearance: none;
+}
+
+.inp-text:focus {
+    outline: none;
+    border: 2px solid var(--Strong-cyan);
+}
+
+.inp-wrapper {
+    position: relative;
+}
+
+.inp-wrapper img {
+    position: absolute;
+    top: 1.2rem;
+    left: 2rem;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.btn {
+    width: 45%;
+    text-align: center;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.btn-active {
+    background-color: var(--Strong-cyan);
+}
+
+.btn:hover {
+    background-color: rgb(123, 219, 206);
+}
+
+.inp-custom {
+    width: 45%;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.output {
+    background-color: var(--Very-dark-cyan);
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 2.2rem;
+}
+
+.line-output {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.4rem 0;
+}
+
+.title {
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    color: var(--Dark-grayish-cyan-2);
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.value {
+    color: var(--Strong-cyan);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.btn-reset {
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    background-color: rgb(123, 219, 206);
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 80%;
+        flex-direction: row;
+        align-items: stretch;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05),
+            0px 20px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .output {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4rem;
+    }
+
+    .line-output {
+        margin: 0.5rem 0 2.5rem 0;
+    }
+
+    .value {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        width: 60%;
+        flex-direction: row;
+        align-items: stretch;
+        padding: 4rem;
+    }
+
+    .btn {
+        width: 30%;
+    }
+    .inp-custom {
+        width: 30%;
+    }
+}
